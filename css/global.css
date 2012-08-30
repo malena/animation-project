@@ -1,0 +1,77 @@
+body {
+    position: absolute;
+    top: 0;
+    left:0;
+    font-family: "Comic Sans MS";
+    width: 5000px;
+    background-color: #eee;
+    display: block;
+}
+
+.introduction {
+    position: absolute;
+    top: 0;
+    left:0;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    box-shadow: 10px 10px 5px #888;
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+}
+
+section {
+    width: 1000px;
+    height: 720px;
+    position: relative;
+    border: solid 1px red;
+}
+
+.first-part {
+    background: url(../images/bikeshop.gif) no-repeat;
+    left: 1500px;
+}
+
+.second-part {
+    left: 1400px;
+}
+
+.third-part {
+    left: 1800px;
+}
+
+h1 {
+    font-size: 18px;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+ul {
+    margin: auto auto;
+    padding: 0;
+    width: 900px;
+    height: 500px;
+    list-style-type: none;
+}
+
+li {
+   position: relative;
+
+}
+
+
+.bike-part-title {
+    display: none;
+    height: 30px;
+}
+
+.bike-shop {
+}
