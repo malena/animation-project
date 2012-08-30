@@ -4,25 +4,30 @@
         <title>Title</title>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script type="text/javascript" src="js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax.min.js"></script>
         <script type="text/javascript" src="js/core.js"></script>
         <link type="text/css" rel="stylesheet" href="css/global.css">
         <meta charset="UTF-8">
     </head>
 
     <body>
-        <header class="introduction">
-            <h1>Do you know your bike parts?</h1>
-            <p>Let's get started! Hover over each bike part to find out what it is!</p>
-        </header>
-        <section class="first-part">
-            <div class="bike-shop">
+        <div class="parallax-viewport">
+            <header class="introduction">
+                <h1>Do you know your bike parts?</h1>
+                <p>Let's get started! Hover over each bike part to find out what it is!</p>
+            </header>
+            <div id="target">
+                <section class="parallax-layer first-part">
+                    <div class="bike-shop">
+                    </div>
+                </section>
+                <section class="parallax-layer second-part">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec lectus libero. Aliquam massa felis, consectetur ut venenatis in, egestas ac libero. Integer ornare purus sed urna dapibus volutpat. Proin quis odio nisi. Cras consequat justo et est volutpat ac rhoncus lacus convallis. Aliquam sed iaculis velit. Aenean ac nulla sed nunc porttitor vehicula. Duis nec nibh nunc, nec ornare tortor. Phasellus arcu dui, vestibulum et consectetur vel, placerat a ipsum. In hac habitasse platea dictumst. Proin dapibus elementum massa, vel ornare nunc viverra ac. Vestibulum ac diam in nisl commodo ullamcorper in sit amet ipsum.</p>
+                </section>
+                <section class="parallax-layer third-part">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec lectus libero. Aliquam massa felis, consectetur ut venenatis in, egestas ac libero. Integer ornare purus sed urna dapibus volutpat. Proin quis odio nisi. Cras consequat justo et est volutpat ac rhoncus lacus convallis. Aliquam sed iaculis velit. Aenean ac nulla sed nunc porttitor vehicula. Duis nec nibh nunc, nec ornare tortor. Phasellus arcu dui, vestibulum et consectetur vel, placerat a ipsum. In hac habitasse platea dictumst. Proin dapibus elementum massa, vel ornare nunc viverra ac. Vestibulum ac diam in nisl commodo ullamcorper in sit amet ipsum.</p>
+                </section>
             </div>
-        </section>
-        <section class="second-part">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec lectus libero. Aliquam massa felis, consectetur ut venenatis in, egestas ac libero. Integer ornare purus sed urna dapibus volutpat. Proin quis odio nisi. Cras consequat justo et est volutpat ac rhoncus lacus convallis. Aliquam sed iaculis velit. Aenean ac nulla sed nunc porttitor vehicula. Duis nec nibh nunc, nec ornare tortor. Phasellus arcu dui, vestibulum et consectetur vel, placerat a ipsum. In hac habitasse platea dictumst. Proin dapibus elementum massa, vel ornare nunc viverra ac. Vestibulum ac diam in nisl commodo ullamcorper in sit amet ipsum.</p>
-        </section>
-        <section class="third-part">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec lectus libero. Aliquam massa felis, consectetur ut venenatis in, egestas ac libero. Integer ornare purus sed urna dapibus volutpat. Proin quis odio nisi. Cras consequat justo et est volutpat ac rhoncus lacus convallis. Aliquam sed iaculis velit. Aenean ac nulla sed nunc porttitor vehicula. Duis nec nibh nunc, nec ornare tortor. Phasellus arcu dui, vestibulum et consectetur vel, placerat a ipsum. In hac habitasse platea dictumst. Proin dapibus elementum massa, vel ornare nunc viverra ac. Vestibulum ac diam in nisl commodo ullamcorper in sit amet ipsum.</p>
-        </section>
+        </div>
     </body>
 </html>
