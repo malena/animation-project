@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 0;
     left:0;
@@ -8,28 +10,16 @@ body {
 }
 
 .introduction {
-    position: absolute;
-    top: 0;
-    left:0;
-    margin: 0 auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 200px;
-    box-shadow: 10px 10px 5px #888;
-    padding: 50px;
-    text-align: center;
-    opacity: 0;
 }
 
 section {
     width: 1000px;
     height: 720px;
     position: relative;
-    border: solid 1px red;
 }
 
 .first-part {
-    background: url(../images/bikeshop.gif) no-repeat;
+    background: url(../images/biker.png) no-repeat;
 }
 
 .second-part {
@@ -71,12 +61,20 @@ li {
 /*  Parallax
 /* ============================================ */
 
-.parallax-viewport {
+#container {
+    height: 4064px;
+    overflow: hidden;
+    position: relative;
+}
+
+#landscape {
+    background: url(../images/landscape.png) repeat-x bottom left;
     position:relative;
     overflow:hidden;
-    width: 800px;
-    height: 800px;
+    width: 8000px;
+    height: 6025px;
 }
+
 
 .parallax-layer {
     position:absolute;

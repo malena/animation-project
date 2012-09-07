@@ -1,15 +1,7 @@
 $(document).ready(function(){
 
-     var target = jQuery("#target");
+    jQuery( '.parallax-layer' ).parallax( mouseport );
 
-      target
-      .children('img')
-      .parallax(
-          { mouseport: target },
-          { xparallax: 0.2, yparallax: 0.2 },     // Blue layer options
-          { xparallax: 0.6, yparallax: 0.6 },     // Green layer options
-          {}                                      // Red layer options
-      );
 
     // Global Object
 
@@ -52,10 +44,10 @@ $(document).ready(function(){
         });
     };
 
-    getBikePartList();
+  //  getBikePartList();
 
     //   Bikeapp.fadeIn();
 
-    Bikeapp.dropDownTween();
+  //  Bikeapp.dropDownTween();
 
 });
