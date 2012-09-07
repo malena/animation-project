@@ -13,13 +13,13 @@ var $container;
 var $landscape;
 var $story;
 
-var barrelsHeight;
+var landscapeHeight;
 var storyHeight;
 var homeHeight;
 
 function setStorySpeed(){
     var storyDisplacement = storyHeight - $window.height() + homeHeight;
-    var barrelsDisplacement = barrelsHeight - $window.height();
+    var barrelsDisplacement = landscapeHeight - $window.height();
 
     // Barrel Movement --> 1 : 1 + barrelSpeed
     // Story Movement --> 1 : 1 + barrelSpeed + storySpeed
@@ -29,7 +29,7 @@ function setStorySpeed(){
 }
 
 function resizeContainer() {
-    var originalDisplacement = barrelsHeight - $window.height();
+    var originalDisplacement = landscapeHeight - $window.height();
     var displacement = originalDisplacement / (1 + barrelSpeed);
     var containerHeight = $window.height() + displacement;
 
@@ -40,12 +40,11 @@ function parallax() {
     var scrollTop = $window.scrollTop();
 
     //barrels top position is moving up
-    $barrels.css("top", "-" + (scrollTop * barrelSpeed) + "px");
+    $landscape.css("top", "-" + (scrollTop * barrelSpeed) + "px");
 
     // story top position is moving up
     $story.css("top", "-" + (scrollTop * storySpeed) + "px");
 
-    adjustClock();
 }
 
 $window.resize(function() {
@@ -61,7 +60,7 @@ $(document).ready(function() {
     $landscape = $("#landscape");
     $story = $("#story");
 
-    barrelsHeight = $barrels.height();
+    landscapeHeight = $landscape.height();
     storyHeight = $story.height();
     homeHeight = $("#home").height();
 

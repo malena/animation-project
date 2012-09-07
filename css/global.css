@@ -18,15 +18,6 @@ section {
     position: relative;
 }
 
-.first-part {
-    background: url(../images/biker.png) no-repeat;
-}
-
-.second-part {
-}
-
-.third-part {
-}
 
 h1 {
     font-size: 18px;
@@ -68,14 +59,18 @@ li {
 }
 
 #landscape {
-    background: url(../images/landscape.png) repeat-x bottom left;
+    background: url(../images/landscape.png) repeat-x top left;
     position:relative;
     overflow:hidden;
     width: 8000px;
     height: 6025px;
 }
 
-
-.parallax-layer {
-    position:absolute;
+#story {
+    position: relative;
+    display: block;
+    z-index: 20000;
+    background: url(../images/biker.png) no-repeat;
 }
+
+
