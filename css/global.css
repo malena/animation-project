@@ -2,77 +2,30 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 0;
-    left:0;
     font-family: "Comic Sans MS";
-    background-color: #eee;
+    background: url('../images/background.png');
     display: block;
-}
-
-.introduction {
+    height: 100%;
 }
 
 section {
-    width: 1000px;
-    height: 720px;
-    position: relative;
-}
-
-
-h1 {
-    font-size: 18px;
-    color: #fff;
-}
-
-a {
-    color: #fff;
-    border-radius: 10px;
-    text-decoration: none;
-    padding: 5px;
-}
-
-ul {
-    margin: auto auto;
-    padding: 0;
-    width: 900px;
-    height: 500px;
-    list-style-type: none;
-}
-
-li {
-   position: relative;
-
-}
-
-.bike-part-title {
-    display: none;
-    height: 30px;
 }
 
 /*  Parallax
 /* ============================================ */
 
 #container {
-    height: 4064px;
-    overflow: hidden;
+    background: url('../images/landscape.png') repeat-x bottom left;
     position: relative;
-}
-
-#landscape {
-    background: url(../images/landscape.png) repeat-x top left;
-    position:relative;
-    overflow:hidden;
-    width: 8000px;
-    height: 6025px;
+    overflow: hidden;
+    width: 9000px;
+    height: 100%;
 }
 
 #story {
     position: relative;
     display: block;
-    z-index: 20000;
-    background: url(../images/biker.png) no-repeat;
 }
-
 
 /*  Parallax
 /* ============================================ */
@@ -81,10 +34,13 @@ li {
 	margin: auto auto;
 	width: 100%;
 	height: 100%;
-	border: solid 2px red;
 }
 
 #biker {
 	position: absolute;
-	background: url(../images/biker.png) no-repeat 0 0 red;
+    top: -200px;
+    left: -300px;
+	background: url('../images/biker.png') no-repeat 0 0;
+    height: 600px;
+    width: 600px;
 }
