@@ -3,19 +3,14 @@ body {
     padding: 0;
     position: absolute;
     font-family: "Comic Sans MS";
-    background: url('../images/background.png');
     display: block;
     height: 100%;
 }
 
-section {
-}
-
-/*  Parallax
-/* ============================================ */
-
 #container {
-    background: url('../images/landscape.png') repeat-x bottom left;
+    background-image: url('../images/landscape.png');
+    background-position: bottom left;
+    background-repeat: repeat-x;
     position: relative;
     overflow: hidden;
     width: 9000px;
@@ -28,7 +23,7 @@ section {
 }
 
 /*  Parallax
-/* ============================================ */
+============================================ */
 
 #p-background {
 	margin: auto auto;
@@ -37,10 +32,26 @@ section {
 }
 
 #biker {
-	position: absolute;
     top: -200px;
     left: -300px;
+	position: absolute;
 	background: url('../images/biker.png') no-repeat 0 0;
     height: 600px;
     width: 600px;
+}
+
+/* Intro Message
+=================================================== */
+
+#introduction {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    margin: 50px 0 0 200px;
+}
+
+#introduction p {
+    font-size: 40px;
 }
