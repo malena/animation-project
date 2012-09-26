@@ -17,7 +17,7 @@ $(document).ready(function(){
 		}
 
 		function moveBikeOffScreen(){
-			TweenLite.to(biker, 2.5, {css:{left:"+=400px"}, ease:Power3.easeOut});
+			TweenLite.to(biker, 2.5, {css:{left:"+=300px"}, ease:Power3.easeOut});
 			TweenLite.to(intro, 2.5, {css:{display: "block", opacity: '1'}});
 		}
 
@@ -56,6 +56,7 @@ $(document).ready(function(){
     $('#continue1').on('click', function(){
 		var introduction = $('#introduction p');
         explodeIntro(introduction);
+        moveBackground();
     });
 
 });
