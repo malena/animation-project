@@ -6,7 +6,6 @@ body {
     font-family: "Comic Sans MS";
     display: block;
     height: 100%;
-    background: url('../images/background.jpg');
 }
 
 #container {
@@ -46,7 +45,6 @@ body {
 =================================================== */
 
 #introduction {
-    color: #fff;
     display: none;
     opacity: 0;
     position: absolute;

@@ -3,7 +3,6 @@ $(document).ready(function(){
 	var startBiker = function() {
 		var biker = $('#biker');
 		TweenLite.to(biker, 3, {css:{top:"+=400px", left:"+=1200px"}});
-
 	};
 
 	var landBiker = function() {
@@ -20,7 +19,6 @@ $(document).ready(function(){
 			TweenLite.to(biker, 2.5, {css:{left:"+=300px"}, ease:Power3.easeOut});
 			TweenLite.to(intro, 2.5, {css:{display: "block", opacity: '1'}});
 		}
-
 	};
 
 	var moveBackground = function(){
@@ -40,7 +38,6 @@ $(document).ready(function(){
             var newTop = Math.floor(Math.random()*500)*((i%2)?1:-1);
             var newLeft = Math.floor(Math.random()*500)*((i%2)?1:-1);
 
-            /* Tweenlite */
             $(this).css({position: "relative", opacity: 1, fontSize: 60, top: 0, left: 0});
             TweenLite.to(this, 1, {css:{opacity:"0", fontSize:"84", top: newTop, left: newLeft}});
 
@@ -60,5 +57,3 @@ $(document).ready(function(){
     });
 
 });
-
-
