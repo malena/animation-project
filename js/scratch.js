@@ -1,8 +1,18 @@
 $(document).ready(function(){
 
 	var startBiker = function() {
+		var viewPortHeight = $(document).height();
+		var viewPortWidth = $(window).width();
+
+		var landingVerticalPosition = viewPortHeight - 200;
+		var newTopPosition = '+=' + landingVerticalPosition + 'px';
+
+		var landingHorizontalPosition = viewPortWidth;
+		var newLeftPosition = '+=' + landingHorizontalPosition + 'px';
+
 		var biker = $('#biker');
-		TweenLite.to(biker, 3, {css:{top:"+=400px", left:"+=1200px"}});
+		TweenLite.to(biker, 3, {css:{top:newTopPosition, left:newLeftPosition}});
+
 	};
 
 	var landBiker = function() {
@@ -19,6 +29,7 @@ $(document).ready(function(){
 			TweenLite.to(biker, 2.5, {css:{left:"+=300px"}, ease:Power3.easeOut});
 			TweenLite.to(intro, 2.5, {css:{display: "block", opacity: '1'}});
 		}
+
 	};
 
 	var moveBackground = function(){
@@ -38,22 +49,42 @@ $(document).ready(function(){
             var newTop = Math.floor(Math.random()*500)*((i%2)?1:-1);
             var newLeft = Math.floor(Math.random()*500)*((i%2)?1:-1);
 
+            /* Tweenlite */
             $(this).css({position: "relative", opacity: 1, fontSize: 60, top: 0, left: 0});
             TweenLite.to(this, 1, {css:{opacity:"0", fontSize:"84", top: newTop, left: newLeft}});
 
         });
+
+    };
+
+    var tweenClouds = function(){
+		var clouds = $('#clouds');
+		TweenLite.to(clouds, 9, {css:{backgroundPosition:"-=800px top"}, ease:Strong.easeOut});
+    };
+
+    var showFirstSection = function(){
+    	var first = $('#first');
+    	first.fadeIn();
     };
 
 
 	startBiker();
 	landBiker();
 	moveBackground();
+	tweenClouds();
+
+
 
 
     $('#continue1').on('click', function(){
 		var introduction = $('#introduction p');
         explodeIntro(introduction);
+        $('#introduction a').hide();
         moveBackground();
+        tweenClouds();
+        showFirstSection();
     });
 
 });
+
+

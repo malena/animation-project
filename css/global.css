@@ -26,7 +26,8 @@ body {
 /*  Parallax
 ============================================ */
 
-#p-background {
+#clouds {
+    background: url('../images/clouds.png') transparent top left repeat-x;
 	margin: auto auto;
 	width: 100%;
 	height: 100%;
@@ -50,7 +51,7 @@ body {
     position: absolute;
     width: 500px;
     height: 300px;
-    margin: 50px 0 0 200px;
+    margin: 90px 0 0 200px;
 }
 
 #introduction p {
@@ -61,5 +62,10 @@ body {
 =================================================== */
 
 #first {
-   display: none;
+    font-size: 40px;
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    margin: 90px 0 0 200px;
 }
