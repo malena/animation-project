@@ -32,6 +32,12 @@ $(document).ready(function(){
 
 	};
 
+	var moveBikerFirstPhase = function(){
+		var biker = $('#biker');
+
+		TweenLite.to(biker, 2.5, {css:{left:"-=300px"}, ease:Power3.easeInOut});
+	};
+
 	var moveBackground = function(){
 		var container = $('#container');
 		TweenLite.to(container, 6, {css:{backgroundPosition:"-=800px bottom"}, ease:Strong.easeOut});
@@ -58,13 +64,23 @@ $(document).ready(function(){
     };
 
     var tweenClouds = function(){
-		var clouds = $('#clouds');
-		TweenLite.to(clouds, 9, {css:{backgroundPosition:"-=800px top"}, ease:Strong.easeOut});
+        var clouds = $('#clouds');
+        var updatedBackgroundPosition = '-=' + incrementCounter + 'px top';
+
+        var incrementCounter = function(){
+            var x = 0;
+            setInterval(function(){
+                x ++;
+                console.log(x);
+            },  1000);
+        };
+        incrementCounter();
+		TweenLite.to(clouds, incrementCounter, {css:{backgroundPosition: updatedBackgroundPosition}});
     };
 
-    var showFirstSection = function(){
-    	var first = $('#first');
-    	first.fadeIn();
+	var showFirstSection = function(){
+		var first = $('#first');
+		first.fadeIn();
     };
 
 
@@ -74,17 +90,13 @@ $(document).ready(function(){
 	tweenClouds();
 
 
-
-
     $('#continue1').on('click', function(){
 		var introduction = $('#introduction p');
         explodeIntro(introduction);
         $('#introduction a').hide();
         moveBackground();
-        tweenClouds();
         showFirstSection();
+        moveBikerFirstPhase();
     });
 
 });
-
-
