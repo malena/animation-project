@@ -51,11 +51,11 @@ body {
     position: absolute;
     width: 500px;
     height: 300px;
-    margin: 90px 0 0 200px;
+    padding: 90px 0 0 200px;
 }
 
 #introduction p {
-    font-size: 40px;
+    font-size: 2em;
 }
 
 /* Content Sections
@@ -65,10 +65,10 @@ body {
 }
 
 #first {
-    font-size: 40px;
+    font-size: 2em;
     display: none;
     position: absolute;
     width: 500px;
     height: 300px;
-    margin: 90px 0 0 200px;
+    padding: 90px 0 0 200px;
 }
