@@ -63,21 +63,7 @@ $(document).ready(function(){
 
     };
 
-    var tweenClouds = function(){
-        var clouds = $('#clouds');
-        var updatedBackgroundPosition = '-=' + incrementCounter + 'px top';
-
-        var incrementCounter = function(){
-            var x = 0;
-            setInterval(function(){
-                x ++;
-                console.log(x);
-            },  1000);
-        };
-        incrementCounter();
-		TweenLite.to(clouds, incrementCounter, {css:{backgroundPosition: updatedBackgroundPosition}});
-    };
-
+  
 	var showFirstSection = function(){
 		var first = $('#first');
 		first.fadeIn();
@@ -87,7 +73,6 @@ $(document).ready(function(){
 	startBiker();
 	landBiker();
 	moveBackground();
-	tweenClouds();
 
 
     $('#continue1').on('click', function(){
@@ -100,3 +85,23 @@ $(document).ready(function(){
     });
 
 });
+
+
+    var incrementCounter = function(){
+
+        var x = 0;
+
+        setInterval(function(){
+            x ++;
+
+	        var clouds = $('#clouds');
+            var count = x;
+            var updatedBackgroundPosition = '-=' + count + 'px top';
+
+			TweenLite.to(clouds, 1.5, {css:{backgroundPosition: updatedBackgroundPosition, ease:Linear.easeNone, delay: 0}});
+        },  500);
+    }
+
+    incrementCounter();
+
+
