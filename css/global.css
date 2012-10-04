@@ -23,9 +23,6 @@ body {
     display: block;
 }
 
-/*  Parallax
-============================================ */
-
 #clouds {
     background: url('../images/clouds.png') transparent top left repeat-x;
 	margin: auto auto;
@@ -34,6 +31,7 @@ body {
 }
 
 #biker {
+   font-size: 40px;
     top: -200px;
     left: -300px;
 	position: absolute;
@@ -51,7 +49,7 @@ body {
     position: absolute;
     width: 500px;
     height: 300px;
-    padding: 90px 0 0 200px;
+    padding: 170px 0 0 200px;
 }
 
 #introduction p {
@@ -60,15 +58,68 @@ body {
 
 /* Content Sections
 =================================================== */
-#biker {
-   font-size: 40px;
+
+#biker p {
+    position: relative;
+    top: 0px;
+    left: -165px;
 }
 
 #first {
-    font-size: 2em;
+    padding: 20px;
+    background-color: black;
     display: none;
+    opacity: 0;
+    font-size: 2em;
     position: absolute;
-    width: 500px;
-    height: 300px;
-    padding: 90px 0 0 200px;
+    width: 700px;
+    height: 500px;
+    left: -400px;
+    top: 100px;
+    border-radius: 20px;
+}
+
+#first p {
+    margin: auto auto;
+    width: 380px;
+    color: #fff;
+}
+
+#first a {
+   color: #fff;
+}
+
+#second {
+    padding: 20px;
+    background-color: black;
+    display: none;
+    opacity: 0;
+    font-size: 2em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#second p {
+   color: #fff;
+}
+
+#second ul {
+   position: absolute;
+   bottom: 50px;
+}
+
+#second ul li {
+    text-align: center;
+    display: block;
+    border: solid 1px #fff;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+#second ul a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
 }

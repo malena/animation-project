@@ -38,6 +38,18 @@ $(document).ready(function(){
 		TweenLite.to(biker, 2.5, {css:{left:"-=300px"}, ease:Power3.easeInOut});
 	};
 
+    var moveBikerSecondPhase = function(){
+        var biker = $('#biker');
+        TweenLite.to(biker, 2.5, {css:{left:"+=600px", opacity: 0}, ease:Power3.easeInOut, onComplete:openModal});
+
+        function openModal(){
+            var modal = $('#second');
+            var height = $(document).height();
+            TweenLite.to(modal, 2.5, {css:{display: "block", opacity: '0.9',height: height}, ease:Expo.easeOut});
+        }
+
+    };
+
 	var moveBackground = function(){
 		var container = $('#container');
 		TweenLite.to(container, 6, {css:{backgroundPosition:"-=800px bottom"}, ease:Strong.easeOut});
@@ -63,11 +75,11 @@ $(document).ready(function(){
 
     };
 
+    var first = $('#first');
 
-	var showFirstSection = function(){
-		var first = $('#first');
-		first.fadeIn();
-    };
+	var showFirstSection = TweenLite.to(first, 1.5, {css:{display: "block", opacity: '0.8', left: '100px', width: '500px'}, ease:Expo.easeOut});
+
+    showFirstSection.pause();
 
 
 	startBiker();
@@ -80,27 +92,26 @@ $(document).ready(function(){
         explodeIntro(introduction);
         $('#introduction a').hide();
         moveBackground();
-        showFirstSection();
+        showFirstSection.resume();
         moveBikerFirstPhase();
+    });
+
+    $('#continue2').on('click', function(){
+        showFirstSection.reverse();
+        moveBikerSecondPhase();
     });
 
 });
 
 
-    var incrementCounter = function(){
+var incrementCounter = function(){
 
-        var x = 0;
+    var x = 0;
 
-        setInterval(function(){
-            x = x + 1;
-            var clouds = $('#clouds');
-            var count = x;
-            var updatedBackgroundPosition = '-=' + count + 'px top';
+    setInterval(function(){
+        var clouds = $('#clouds');
+		TweenLite.to(clouds, 1.5, {css:{backgroundPosition: '-=1px top', ease:Power0.easeIn}});
+    },  500);
+};
 
-			TweenLite.to(clouds, 1.5, {css:{backgroundPosition: updatedBackgroundPosition, ease:Linear.easeNone, delay: 0}});
-        },  500);
-    };
-
-    incrementCounter();
-
-
+incrementCounter();
