@@ -8,6 +8,17 @@ body {
     height: 100%;
 }
 
+
+a {
+    font-size: 14px;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+   color: red;
+}
+
 #container {
     background-image: url('../images/landscape.png');
     background-position: bottom left;
@@ -39,6 +50,14 @@ body {
     height: 600px;
     width: 600px;
 }
+
+/* Continue Buttons
+=================================================== */
+
+#continue2 {
+    display: block;
+}
+
 
 /* Intro Message
 =================================================== */
@@ -86,11 +105,9 @@ body {
 }
 
 #first a {
-   color: #fff;
 }
 
 #second {
-    padding: 20px;
     background-color: black;
     display: none;
     opacity: 0;
@@ -114,7 +131,7 @@ body {
     display: block;
     border: solid 1px #fff;
     width: 100px;
-    height: 100px;
+    height: 50px;
     float: left;
 }
 
@@ -123,3 +140,24 @@ body {
     font-size: 14px;
     text-decoration: none;
 }
+
+.display {
+    padding: 20px;
+    background-color: #fff;
+    display: none;
+    opacity: 0;
+    font-size: 2em;
+    position: relative;
+    width: 100%;
+    height: 420px;
+    margin: auto auto;
+    text-align: center;
+}
+
+.display img {
+   position: relative;
+   margin: auto auto;
+   text-align: center;
+}
+
+
