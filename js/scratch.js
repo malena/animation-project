@@ -1,6 +1,22 @@
-$(document).ready(function(){
+$(function(){
 
-    var biker = $('#biker');
+    var BIKEAPP = {
+
+        template_ids    : {
+            biker            : '#biker',
+            intro            : '#introduction',
+            container        : '#container',
+            modal            : '#second',
+            first            : '#first',
+            display          : '.display'
+        },
+        animations : {
+            startBiker   :   function(){
+                console.log(this.biker);
+            }
+        }
+    };
+
     var intro = $('#introduction');
     var container = $('#container');
     var modal = $('#second');
@@ -100,15 +116,16 @@ $(document).ready(function(){
 
     });
 
+
+    var incrementCounter = function(){
+        var x = 0;
+
+        setInterval(function(){
+            var clouds = $('#clouds');
+    		TweenLite.to(clouds, 1.5, {css:{backgroundPosition: '-=1px top', ease:Power0.easeIn}});
+        },  500);
+    };
+
+    incrementCounter();
+
 });
-
-var incrementCounter = function(){
-    var x = 0;
-
-    setInterval(function(){
-        var clouds = $('#clouds');
-		TweenLite.to(clouds, 1.5, {css:{backgroundPosition: '-=1px top', ease:Power0.easeIn}});
-    },  500);
-};
-
-incrementCounter();
