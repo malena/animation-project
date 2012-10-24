@@ -1,11 +1,11 @@
 body {
+    display: block;
+    position: absolute;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    position: absolute;
-    font-family: "Comic Sans MS";
-    display: block;
     height: 100%;
+    font-family: "Comic Sans MS";
 }
 
 
@@ -20,11 +20,8 @@ a:hover {
 }
 
 #container {
-    background-image: url('../images/landscape.png');
-    background-position: bottom left;
-    background-repeat: repeat-x;
     position: relative;
-    overflow: hidden;
+    background: url('../images/landscape.png') transparent bottom left repeat-x;
     width: 9000px;
     height: 100%;
 }
@@ -41,7 +38,7 @@ a:hover {
 	height: 100%;
 }
 
-#biker {
+#cyclist {
    font-size: 40px;
     top: -200px;
     left: -300px;
@@ -62,7 +59,7 @@ a:hover {
 /* Intro Message
 =================================================== */
 
-#introduction {
+.introduction {
     display: none;
     opacity: 0;
     position: absolute;
@@ -71,20 +68,20 @@ a:hover {
     padding: 170px 0 0 200px;
 }
 
-#introduction p {
+.introduction p {
     font-size: 2em;
 }
 
 /* Content Sections
 =================================================== */
 
-#biker p {
+#cyclist p {
     position: relative;
     top: 0px;
     left: -165px;
 }
 
-#first {
+#phase1 {
     padding: 20px;
     background-color: black;
     display: none;
@@ -98,35 +95,35 @@ a:hover {
     border-radius: 20px;
 }
 
-#first p {
+#phase1 p {
     margin: auto auto;
-    width: 380px;
+    width: 475px;
     color: #fff;
 }
 
-#first a {
-}
-
-#second {
+#phase2 {
     background-color: black;
     display: none;
     opacity: 0;
     font-size: 2em;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
 }
 
-#second p {
+#phase2 p {
    color: #fff;
 }
 
-#second ul {
-   position: absolute;
-   bottom: 50px;
+#phase2 ul {
+    width: 1020px;
+    position: relative;
+    margin: auto auto;
+    text-align: center;
+    padding: 0px;
 }
 
-#second ul li {
+#phase2 ul li {
     text-align: center;
     display: block;
     border: solid 1px #fff;
@@ -135,7 +132,9 @@ a:hover {
     float: left;
 }
 
-#second ul a {
+#phase2 ul a {
+    padding: 15px;
+    display: block;
     color: #fff;
     font-size: 14px;
     text-decoration: none;
@@ -143,21 +142,21 @@ a:hover {
 
 .display {
     padding: 20px;
-    background-color: #fff;
     display: none;
     opacity: 0;
     font-size: 2em;
     position: relative;
     width: 100%;
-    height: 420px;
+    height: 580px;
     margin: auto auto;
     text-align: center;
 }
 
 .display img {
-   position: relative;
-   margin: auto auto;
-   text-align: center;
+    width: 500px;
+    position: relative;
+    margin: 1.5em auto;
+    text-align: center;
 }
 
 
