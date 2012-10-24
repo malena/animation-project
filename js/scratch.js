@@ -24,8 +24,10 @@ $(function(){
     var viewPortWidth = $(window).width();
     var first = $('#first');
     var landingVerticalPosition = viewPortHeight - 200;
+
     var newTopPosition = '+=' + landingVerticalPosition + 'px';
     var landingHorizontalPosition = viewPortWidth;
+
     var newLeftPosition = '+=' + landingHorizontalPosition + 'px';
     var display = $('.display');
     var bikeImage = $('img');
