@@ -85,6 +85,7 @@ $(function(){
 
     var showPartsDisplay = new TimelineLite();
 
+    showPartsDisplay.to(phase3, 1, {css:{display: "block", height: vp_height, width: vp_width}});
     showPartsDisplay.to(display_img, 1, {css:{rotation: 360, width:"400px", opacity:"0"}});
     showPartsDisplay.to(parts_list, 1, {css:{left:"1800px", opacity:"0"}, ease:Power2.easeIneaseOut});
     showPartsDisplay.to(parts_display, 1, {css:{display:"block", opacity:"1"}});
