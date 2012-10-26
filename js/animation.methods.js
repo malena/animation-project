@@ -14,8 +14,23 @@ $(function(){
     var click1      = $('#continue1');
     var click2      = $('#continue2');
     var display     = $('.display');
+    var display_img = $('.display-image');
+
+    var close_button= $('.close-button');
+    var parts_list  = $('.bike-parts');
     var parts_button= $('.bike-parts li');
-    var seat_button = $('#seat');
+    var parts_display=$('.bike-part-display');
+    var part        = $('.part');
+    var seat        = $('#seat');
+    var frame       = $('#frame');
+    var wheel       = $('#wheel');
+    var brakes      = $('#brakes');
+    var pedals      = $('#pedals');
+    var crank       = $('#crank');
+    var sprocket    = $('#sprocket');
+    var chain       = $('#chain');
+    var stem        = $('#stem');
+    var fork        = $('#fork');
 
 // Layout Variables
 // =============================================================================
@@ -57,20 +72,30 @@ $(function(){
                letters.hide();
             }
         });
-
     };
 
-    var rotateElement = function(){
-        TweenLite.to(display, 1, {css:{rotation: 360, opacity:"0"}});
-    };
-
-    var partsClickHandler = function(part){
-        part.on('click', function(){
-            rotateElement();
-
+    var partsClickEvent = function(element, part){
+        element.on('click', function(){
+            console.log('just clicked on:' + part);
+            showPartsDisplay.play();
+            $(".part").hide();
+            $(".part." + part).show();
         });
-    };
+     };
 
+    var showPartsDisplay = new TimelineLite();
+
+    showPartsDisplay.to(display_img, 1, {css:{rotation: 360, width:"400px", opacity:"0"}});
+    showPartsDisplay.to(parts_list, 1, {css:{left:"1800px", opacity:"0"}, ease:Power2.easeIneaseOut});
+    showPartsDisplay.to(parts_display, 1, {css:{display:"block", opacity:"1"}});
+    showPartsDisplay.from(parts_display, 1, {css:{top:"-500px"}, ease:Elastic.easeOut});
+
+    showPartsDisplay.pause();
+
+    var closeModal = function(){
+        console.log('close modal');
+        showPartsDisplay.reverse();
+    };
 
     var animateCyclistIntro = function(){
 
@@ -86,6 +111,7 @@ $(function(){
             TweenLite.to(intro, 2.5, {css:{display: "block", opacity: '1'}});
         }
     };
+
 
     var animateClouds = function(){
         var x = 0;
@@ -104,7 +130,7 @@ $(function(){
     };
 
     var slideModalDown = TweenLite.to(phase2, 2.5, {css:{display: "block", opacity: '0.9',height: vp_height, width: vp_width}, ease:Expo.easeOut, onComplete:openDisplay});
-    var slideInLeft = TweenLite.to(phase1, 1.5, {css:{display: "block", opacity: '0.8', left: '100px', width: '500px'}, ease:Expo.easeOut});
+    var slideInLeft = TweenLite.to(phase1, 1.5, {css:{display: "block", opacity: '0.8', left: '100px'}, ease:Expo.easeOut});
 
     slideInLeft.pause();
     slideModalDown.pause();
@@ -138,11 +164,25 @@ $(function(){
             }
         },
         'phase3' : {
+            'close_button': function clickEvent(){
+                close_button.on('click', function(){
+                    closeModal();
+                });
+            },
             'seat_button': function clickEvent(){
-                partsClickHandler();
+                partsClickEvent(seat, 'seat');
             },
             'frame_button': function clickevent(){
-                partsClickHandler();
+                partsClickEvent(frame, 'frame');
+            },
+            'wheel_button': function clickEvent(){
+                partsClickEvent(wheel, 'wheel');
+            },
+            'brakes_button': function clickEvent(){
+                partsClickEvent(brakes, 'brakes');
+            },
+            'pedals_button': function clickEvent(){
+                partsClickEvent(pedals, 'pedals');
             }
         }
     };
@@ -152,11 +192,16 @@ $(function(){
 // ============================================================================
 
     animateClouds();
-
     animateCyclistIntro();
 
     animationPhases.phase1.continue_button();
     animationPhases.phase2.continue_button();
-    animationPhases.phase3.seat_botton();
+
+    animationPhases.phase3.close_button();
+    animationPhases.phase3.seat_button();
+    animationPhases.phase3.frame_button();
+    animationPhases.phase3.wheel_button();
+    animationPhases.phase3.brakes_button();
+    animationPhases.phase3.pedals_button();
 
 });

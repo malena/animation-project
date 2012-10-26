@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: "Comic Sans MS";
+    font-family: 'Short Stack', cursive;
 }
 
 
@@ -18,6 +18,69 @@ a {
 a:hover {
    color: red;
 }
+
+a.close-button {
+    top: -14px;
+right: -16px;
+position: absolute;
+width: 15px;
+height: 15px;
+line-height: 15px;
+border-radius: 20px;
+padding: 8px;
+background-color: black;
+color: white;
+border: solid 5px #666;
+font-size: 20px;
+
+}
+
+p {
+    margin: 0;
+}
+
+#phase3 p {
+    font-size: 17px;
+    padding: 0px 40px;
+}
+
+#phase3 a {
+  margin-left: 40px;
+}
+
+h1 {
+    font-size: 39px;
+    text-shadow: 5px 4px #EEE;
+    text-transform: uppercase;
+    margin-left: 30px;
+    text-align: left;
+}
+
+/* Continue Buttons
+=================================================== */
+
+a.continue {
+    font-size: 18px;
+    position: relative;
+    text-transform: uppercase;
+    border: 3px solid #666;
+    padding: 8px 30px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    top: 24px;
+    text-align: right;
+    float: right;
+}
+
+#continue2 {
+    display: block;
+    top: 80px;
+    left: 20px;
+}
+
+/* Base
+=================================================== */
 
 #container {
     position: relative;
@@ -38,48 +101,42 @@ a:hover {
 	height: 100%;
 }
 
+/* Intro Message
+=================================================== */
+
 #cyclist {
    font-size: 40px;
     top: -200px;
     left: -300px;
-	position: absolute;
-	background: url('../images/biker.png') no-repeat 0 0;
+    position: absolute;
+    background: url('../images/biker.png') no-repeat 0 0;
     height: 600px;
     width: 600px;
 }
-
-/* Continue Buttons
-=================================================== */
-
-#continue2 {
-    display: block;
-}
-
-
-/* Intro Message
-=================================================== */
-
-.introduction {
-    display: none;
-    opacity: 0;
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    padding: 170px 0 0 200px;
-}
-
-.introduction p {
-    font-size: 2em;
-}
-
-/* Content Sections
-=================================================== */
 
 #cyclist p {
     position: relative;
     top: 0px;
     left: -165px;
 }
+
+.introduction {
+    top: 190px;
+    left: 200px;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 810px;
+}
+
+.introduction p {
+    float: right;
+    font-size: 50px;
+}
+
+
+/* Phasese
+=================================================== */
 
 #phase1 {
     padding: 20px;
@@ -89,7 +146,7 @@ a:hover {
     font-size: 2em;
     position: absolute;
     width: 700px;
-    height: 500px;
+    height: 280px;
     left: -400px;
     top: 100px;
     border-radius: 20px;
@@ -97,8 +154,8 @@ a:hover {
 
 #phase1 p {
     margin: auto auto;
-    width: 475px;
-    color: #fff;
+    color: white;
+    padding: 20px;
 }
 
 #phase2 {
@@ -107,56 +164,101 @@ a:hover {
     opacity: 0;
     font-size: 2em;
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
 }
 
-#phase2 p {
-   color: #fff;
-}
-
-#phase2 ul {
-    width: 1020px;
-    position: relative;
+#phase2 ul.bike-parts {
+    width: 1222px;
+    position: absolute;
     margin: auto auto;
     text-align: center;
-    padding: 0px;
+    padding: 0;
+    bottom: -56px;
+    margin-left: 40px;
 }
 
-#phase2 ul li {
-    text-align: center;
+#phase2 ul.bike-parts li {
     display: block;
-    border: solid 1px #fff;
-    width: 100px;
     height: 50px;
     float: left;
 }
 
-#phase2 ul a {
-    padding: 15px;
-    display: block;
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
+#phase2 ul.bike-parts a {
+    font-size: 18px;
+    position: relative;
+    text-transform: uppercase;
+    border: 3px solid #666;
+    padding: 5px 20px 5px 20px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .display {
-    padding: 20px;
+    padding: 20px 10px 10px 0px;
     display: none;
     opacity: 0;
     font-size: 2em;
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 580px;
+    height: 530px;
     margin: auto auto;
     text-align: center;
+    background-color: white;
+    border-bottom: dotted 5px #666;
 }
 
-.display img {
-    width: 500px;
+img.display-image {
+    width: 800px;
     position: relative;
-    margin: 1.5em auto;
+    margin: auto auto;
     text-align: center;
+    padding: 20px;
+
 }
 
+/*  Phase 2 Bike Parts
+=================================================== */
 
+#phase3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#phase3 .bike-part-display {
+    display: none;
+    font-size: 2em;
+    position: relative;
+    width: 500px;
+    height: 490px;
+    margin: auto auto;
+    text-align: center;
+    top: 35px;
+    opacity: 0;
+    background-color: white;
+    border: 3px solid #666;
+    border-radius: 30px
+    }
+
+    #phase3 .bike-part-display ul {
+        position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+#phase3 .bike-part-display ul li {
+    text-align: left;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
